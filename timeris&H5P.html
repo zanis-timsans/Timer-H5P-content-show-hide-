@@ -1,0 +1,41 @@
+<style>
+    .buga {
+        visibility: hidden;
+    }
+    .puga {
+        display: none;
+    }
+</style>
+
+<p id="demo">5</p>
+<button onclick="clock(); ">Start counter</button>
+<button onclick="clearInterval(myTimer);">Stop counter</button>
+
+<div class="puga">
+    <p>PICTURE OR TEXT</p>
+</div>
+<div class="buga">
+    <p>H5P CONTENT</p>
+</div>
+<script>
+    var myTimer;
+       function clock() {
+         myTimer = setInterval(myClock, 1000);
+         var c = 5;
+         document.getElementById('demo').innerHTML= c;
+         document.getElementsByClassName('puga')[0].style.display ="block";
+         document.getElementsByClassName('buga')[0].style.visibility ="hidden";
+    
+         function myClock() {
+           document.getElementById("demo").innerHTML = --c;
+           if (c == 0) {
+             clearInterval(myTimer);
+             document.getElementsByClassName('puga')[0].style.display ="none";
+             var elems = document.getElementsByClassName('buga');
+             for (var i=0;i<elems.length;i+=1){
+               elems[i].style.visibility = 'visible';
+             }
+           }
+         }
+       }
+</script>
