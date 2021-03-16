@@ -5,4 +5,6 @@ It is a simple javascript + HTML&CSS. I used CSS parameter "visibility: hidden" 
 
 Simply download and run the "timer&H5P.html" file to see it in action.
 
+[DEMO.](https://asinipratu.lv/lesson/2-1-uzdevums/)
+
 Feel free to use for whatever you like.
